@@ -4,14 +4,11 @@ public class Bud {
 	private Leaf[] leaves;
 	private String colour;
 	private int size;
-	private boolean isBloomed;
+	private boolean bloomed;
 
 	public Bud(int size) {
 		this.size = size;
 		this.colour = "Green";
-	}
-	public String printBudSizeAndColour() {
-		return "Bud size "+getSize() +" and colour " +getColour();
 	}
 	
 	public Leaf[] getLeaves() {
@@ -39,10 +36,10 @@ public class Bud {
 	}
 	
 	public boolean isBloomed() {
-		return isBloomed;
+		return bloomed;
 	}
 	public void setBloomed(boolean isBloomed) {
-		this.isBloomed = isBloomed;
+		this.bloomed = isBloomed;
 	}
 	
 	public void addFreshleaves(int number) {

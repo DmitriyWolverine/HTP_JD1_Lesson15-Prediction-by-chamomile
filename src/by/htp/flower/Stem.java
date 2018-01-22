@@ -27,7 +27,6 @@ public class Stem {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "Stem height: "+ getHeight() +" and width: " + getWidth();
 	}
 }
