@@ -10,7 +10,6 @@ import by.htp.controller.ConsoleHandler;
 import by.htp.exc.IncorectFlowerException;
 import by.htp.flower.Flower;
 
-//implement several flowers option!
 
 public class FutureTeller {
 	private Map<String, List<String>> predictionMap;
