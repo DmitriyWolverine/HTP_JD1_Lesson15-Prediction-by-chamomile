@@ -91,7 +91,6 @@ public class FutureTellerTest {
 		try {
 			teller = new FutureTeller(flowers);
 		} catch (IncorectFlowerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		List<String> res = teller.makePredictionsForAllChamomiles();
