@@ -30,7 +30,6 @@ public class FutureTellerTest {
 		try {
 			teller = new FutureTeller(flower);
 		} catch (IncorectFlowerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 	}
