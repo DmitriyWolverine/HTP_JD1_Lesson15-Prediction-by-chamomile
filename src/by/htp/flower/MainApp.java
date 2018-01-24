@@ -12,8 +12,6 @@ public class MainApp {
 		
 		flower.bloom();
 		printBloomingFlower(flower);
-		
-	//	flower.optionalFuturePredictions();
 		System.out.println(flower.getBud().getLeaves().length );
 		System.out.println("Result is : "+ flower.futurePredictionFromMap() );
 		
