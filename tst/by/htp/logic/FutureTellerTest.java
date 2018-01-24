@@ -23,6 +23,10 @@ public class FutureTellerTest {
 	@Before
 	public void initFutureTeller() {
 		List <Flower> flower = new ArrayList<>();
+		Flower rose = new Flower("Rose");
+		Flower cham = new Flower("Chamomile");
+		flower.add(rose);
+		flower.add(cham);
 		try {
 			teller = new FutureTeller(flower);
 		} catch (IncorectFlowerException e) {
@@ -59,7 +63,7 @@ public class FutureTellerTest {
 			
 		}
 		if(teller.ifChamomileFlower(flower)) {
-			assertEquals("The titles are different! ",flower.getTitle(), camomileFromList);
+			assertEquals("The titles are different! ",flower.getTitle(), camomileFromList.getTitle());
 		}
 	}
 	
@@ -79,10 +83,12 @@ public class FutureTellerTest {
 			fail();
 		}
 	}
-	
+	@Test
 	public void testCorrectFlower() {
 		List<Flower> flowers = new ArrayList<>();
-		flowers.add(new Flower("Chamomile"));
+		Flower cur = new Flower("Chamomile");
+		cur.bloom();
+		flowers.add(cur);
 		try {
 			teller = new FutureTeller(flowers);
 		} catch (IncorectFlowerException e) {
@@ -92,7 +98,7 @@ public class FutureTellerTest {
 		List<String> res = teller.makePredictionsForAllChamomiles();
 		assertTrue("Success in one flower prediction", res.size()== 1 );
 	}
-	
+	@Test
 	public void testSleepingTime() {
 		int topicNumber = teller.getPredictionMap().size();
 		teller.addOneTopic();
